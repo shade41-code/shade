@@ -1,0 +1,18 @@
+# 日志
+# 打开sql日志
+logging:
+  file: /data/ic/app_log/shade/shade-frontend
+  config: classpath:logback-spring.xml
+  level:
+    com:
+      baozun:
+          frontend: debug
+
+# 数据源配置
+spring:
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://http://localhost:3306/springboot?useUnicode=true&characterEncoding=utf8&useSSL=false
+    username: root
+    password: 123456

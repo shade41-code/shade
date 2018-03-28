@@ -1,20 +1,25 @@
 <?xml version="1.0"?>
-<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"
+<project
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"
 	xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 	<modelVersion>4.0.0</modelVersion>
-
 	<parent>
 		<groupId>com.baozun.shade</groupId>
 		<artifactId>shade</artifactId>
 		<version>1.0.0</version>
 	</parent>
 
-	<artifactId>shade-repo</artifactId>
+	<artifactId>shade-frontend</artifactId>
 	<packaging>jar</packaging>
-	<name>shade-repo</name>
-
+	<name>shade-frontend</name>
 
 	<dependencies>
+		<dependency>
+			<groupId>com.baozun.shade</groupId>
+			<artifactId>shade-repo</artifactId>
+			<version>1.0.0</version>
+		</dependency>
+	
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
@@ -48,7 +53,12 @@
 			<artifactId>pagehelper-spring-boot-starter</artifactId>
 			<version>${pagehelper-spring-boot-starter.version}</version>
 		</dependency>
-
+		
+		<dependency>
+		    <groupId>org.springframework.boot</groupId>
+		    <artifactId>spring-boot-starter-data-jpa</artifactId>
+		</dependency>
+		
 		<!-- mysql -->
 		<dependency>
 			<groupId>mysql</groupId>
@@ -61,12 +71,14 @@
 			<artifactId>druid</artifactId>
 			<version>${druid.version}</version>
 		</dependency>
-		
+
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
 	</dependencies>
+
+
 
 </project>
